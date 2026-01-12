@@ -1,4 +1,4 @@
-# Building websites with Quarto and GitHub pages
+# Publishing a Quarto website on GitHub pages
 
 Are you looking for a simple, professional way to showcase your research, CV, and/or complement your publications with more interactive content? What if we were to tell you you can create a free website with Quarto & GitHub pages to promote your work? Join us for a hands-on workshop on building websites using Quarto and GitHub Pages.  If you can write in Markdown, you can build a website — no web development knowledge is needed. 
 
