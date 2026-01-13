@@ -15,12 +15,19 @@ title: "Publishing Quarto websites with GitHub pages"
 ## Potential additional topics
 
 1. css and stysheets
+
 1. GitHub actions to render website
 
 
 ## What could be a fun website content?
 
 - Something on the theme of love data week
-- silly things with giff
+- silly things with giffs
 - piece of code
 - Interactive data visualization
+
+
+## Resources
+
+- Sam's tutorial: <https://ucsb-meds.github.io/creating-quarto-websites>
+- Official Quarto Doocumentation: <https://quarto.org/docs/websites/>
