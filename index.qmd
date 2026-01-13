@@ -30,4 +30,5 @@ title: "Publishing Quarto websites with GitHub pages"
 ## Resources
 
 - Sam's tutorial: <https://ucsb-meds.github.io/creating-quarto-websites>
-- Official Quarto Doocumentation: <https://quarto.org/docs/websites/>
+- Official Quarto Documentation for websites: <https://quarto.org/docs/websites/>
+- Official Quarto Documentation to publish on GitHub Pages <https://quarto.org/docs/publishing/github-pages.html>
