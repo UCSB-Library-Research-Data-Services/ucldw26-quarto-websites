@@ -2,6 +2,25 @@
 title: "Publishing Quarto websites with GitHub pages"
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Workflow to explore
+
+1. Start with a new project on local selecting quarto website + use `usethis` to make it a repo and push it to github
+
+1. Start by rendering locally in a `docs` folder
+
+1. Setup github pages to look into the docs folder for the website
+
+
+## Potential additional topics
+
+1. css and stysheets
+1. GitHub actions to render website
+
+
+## What could be a fun website content?
+
+- Something on the theme of love data week
+- silly things with giff
+- piece of code
+- Interactive data visualization
