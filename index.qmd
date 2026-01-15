@@ -2,13 +2,22 @@
 title: "Publishing Quarto websites with GitHub pages"
 ---
 
+## What is Quarto? 
+
+Short overview of quarto --  Better at the end?
+- How it works
+- What it supports
+
+Transitions to the different formats it can output (website, journal article, presentation, ...)
+
 ## A few examples
 
 Show different quarto websites
 
-- Personal website
-- Teaching materials
-- Journal article complement
+- Personal website: https://brunj7.github.io/
+- Blog based format: https://github.com/realworlddatascience/realworlddatascience.github.io/tree/main
+- Teaching materials: https://ucsb-meds.github.io/creating-quarto-websites
+- Journal article complement: 
 - Dashboard
 
 Can be taken from last year
@@ -25,23 +34,40 @@ Can be taken from last year
 1. Setup github pages to look into the docs folder for the website
 
 
-## Potential additional topics
+## Content
 
-1. css and stysheets
+- Start the new project as a Quarto website
+- Render it
+- Talk about the default files that were created
+   - `_quarto.yml`
+   - `*.qmd` 
+   - `styles.css`
+- Start editing the pages
+- Edit the website structure
+  - play with some options on `_quarto.yml`
 
-1. GitHub actions to render website
 
-
-## What could be a fun website content?
+## What could be a fun website content to build during the workshop?
 
 - Something on the theme of love data week
 - silly things with giffs
 - piece of code
 - Interactive data visualization
+- Probably need some kind of dataset
 
 
-## Resources
+## Potential additional topics
 
+1. How does Quarto works
+
+1. css and stysheets
+
+1. GitHub actions to render website
+
+## Further Readings
+
+- Curated list of awesome quarto content and tutorials: <https://github.com/mcanouil/awesome-quarto>
 - Sam's tutorial: <https://ucsb-meds.github.io/creating-quarto-websites>
 - Official Quarto Documentation for websites: <https://quarto.org/docs/websites/>
 - Official Quarto Documentation to publish on GitHub Pages <https://quarto.org/docs/publishing/github-pages.html>
+- Short video series on creating a Quarto website: <https://www.youtube.com/playlist?list=PLitrm9Undxcu7eExaTg9Y-JYLv9O6uxGu>
