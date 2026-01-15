@@ -2,12 +2,25 @@
 title: "Publishing Quarto websites with GitHub pages"
 ---
 
+## A few examples
+
+Show different quarto websites
+
+- Personal website
+- Teaching materials
+- Journal article complement
+- Dashboard
+
+Can be taken from last year
+
 
 ## Workflow to explore
 
 1. Start with a new project on local selecting quarto website + use `usethis` to make it a repo and push it to github
 
 1. Start by rendering locally in a `docs` folder
+   a. using the GUI
+   a. using the CLI
 
 1. Setup github pages to look into the docs folder for the website
 
