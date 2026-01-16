@@ -10,15 +10,18 @@ Short overview of quarto --  Better at the end?
 
 Transitions to the different formats it can output (website, journal article, presentation, ...)
 
+Last year showcase repo: <https://github.com/UCSB-Library-Research-Data-Services/ucldw25-quarto-showcase/tree/main>
+
+
 ## A few examples
 
 Show different quarto websites
 
-- Personal website: https://brunj7.github.io/
-- Blog based format: https://github.com/realworlddatascience/realworlddatascience.github.io/tree/main
-- Teaching materials: https://ucsb-meds.github.io/creating-quarto-websites
+- Personal website: <https://brunj7.github.io/>
+- Blog based format: <https://github.com/realworlddatascience/realworlddatascience.github.io/tree/main>
+- Teaching materials: <https://ucsb-meds.github.io/creating-quarto-websites>
 - Journal article complement: 
-- Dashboard
+- Dashboard: 
 
 Can be taken from last year
 
