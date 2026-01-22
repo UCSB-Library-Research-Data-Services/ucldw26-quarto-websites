@@ -48,7 +48,11 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# Quarto
 /.quarto/
 **/*.quarto_ipynb
 
 _site/*
+
+# Mac
+**.DS_Store
