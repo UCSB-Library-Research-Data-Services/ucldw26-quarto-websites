@@ -56,33 +56,7 @@ format:
     toc: true
 ```
 
-## So I can build a website that leverages R code!?
-
-Yep!! And as with any other R script, it is good practice to start by loading the libraries you are going to need for your analysis / website content.
-
-```{r}
-library(httr2)
-library(knitr)
-library(tidyverse)
-```
-
-Mmm... this is a lot of information we would like to hide.
-
-### Take two
-
-Adding an execution option: `#| warning: false` to the code chunk will let us hide the warning messages when rendering the document
-
-```{r}
-#| warning: false
-
-library(httr2)
-library(knitr)
-library(tidyverse)
-```
-
-Yeah!!!
-
-## Now we can start coding!
+## Images
 
 Did somebody say cat?? Sorry **cute** cat?! You can insert an image using the markdown syntax: `![Fig caption](path/to/image)`
 
@@ -94,19 +68,53 @@ You can also customize alignment, size and more... add options with `{fig-align=
 
 ![A **smaller** cute cat upside down... on the right](img/cat_upsidedown.jpg){fig-align="right" width="50%"}
 
-### We are going to use the [Cat API](https://thecatapi.com/) to add random cats to our website
+
+## So I can build a website that leverages R code!?
+
+Yep!! And as with any other R script, it is good practice to start by loading the libraries you are going to need for your analysis / website content.
 
 ```{r}
-req <- request("https://api.thecatapi.com/v1")
-resp <- req %>%
-  # Then we add on the images path
-  req_url_path_append("images/search") %>%
-  # Add query parameters _width and _quantity
-  req_url_query(`limit` = 1) %>%
-  req_perform() %>%
-  resp_body_json()
+library(tidyverse)
+library(lterdatasampler)
+library(plotly)
+library(sf)
+library(leaflet)
+```
 
-knitr::include_graphics(resp[[1]]$url)
+Mmm... this is a lot of information we would like to hide.
+
+### Take two
+
+Adding an execution option: `#| warning: false` to the code chunk will let us hide the warning messages when rendering the document
+
+```{r}
+#| warning: false
+library(tidyverse)
+library(lterdatasampler)
+library(plotly)
+library(sf)
+library(leaflet)
+```
+
+Yeah!!!
+
+## Now we can start coding!
+
+The Long Term Ecological Research (LTER) [North Temperate Lakes](https://lter.limnology.wisc.edu) (Madison, WI) reserach site has one of the longest time-series of Temperatures and Lake Ice Duration. The study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems. We can examine the ice duration of Lake Mendota and Lake Monona.
+
+::: callout-tip
+## Fun Fact
+Did you know that Joni Mitchell’s album “Hejira” art is her skating on Lake Mendota in 1976 !? https://wisconsinlife.org/story/joni-mitchell-skates-on-lake-mendota-and-into-music-history/
+:::
+
+```{r}
+ice_duration <-
+  ggplot(data = ntl_icecover, aes(x = year)) +
+  geom_line(aes(y = ice_duration, color = lakeid), alpha = 0.7) +
+  theme_minimal() +
+  labs(x = "Year", y = "Ice Duration (Days)", title = "Ice Duration of Lakes in the Madison, WI Area", subtitle = "North Temperate Lakes LTER")
+
+ice_duration
 ```
 
 ### We might want to hide the code
@@ -115,17 +123,15 @@ Of course there is an [option](https://quarto.org/docs/computations/execution-op
 
 ```{r}
 #| echo: false
+#| warning: false
 
-req <- request("https://api.thecatapi.com/v1")
-resp <- req %>%
-  # Then we add on the images path
-  req_url_path_append("images/search") %>%
-  # Add query parameters _width and _quantity
-  req_url_query(`limit` = 1) %>%
-  req_perform() %>%
-  resp_body_json()
+ice_duration <-
+  ggplot(data = ntl_icecover, aes(x = year)) +
+  geom_line(aes(y = ice_duration, color = lakeid), alpha = 0.7) +
+  theme_minimal() +
+  labs(x = "Year", y = "Ice Duration (Days)", title = "Ice Duration of Lakes in the Madison, WI Area", subtitle = "North Temperate Lakes LTER")
 
-knitr::include_graphics(resp[[1]]$url)
+ice_duration
 ```
 
 ### Or collapse it
@@ -135,19 +141,48 @@ Try `#| code-fold: true` if you want to get fancy
 ```{r}
 #| code-fold: true
 
-req <- request("https://api.thecatapi.com/v1")
-resp <- req %>%
-  # Then we add on the images path
-  req_url_path_append("images/search") %>%
-  # Add query parameters _width and _quantity
-  req_url_query(`limit` = 1) %>%
-  req_perform() %>%
-  resp_body_json()
+ice_duration <-
+  ggplot(data = ntl_icecover, aes(x = year)) +
+  geom_line(aes(y = ice_duration, color = lakeid), alpha = 0.7) +
+  theme_minimal() +
+  labs(x = "Year", y = "Ice Duration (Days)", title = "Ice Duration of Lakes in the Madison, WI Area", subtitle = "North Temperate Lakes LTER")
 
-knitr::include_graphics(resp[[1]]$url)
+ice_duration
 ```
 
 
+## Add an interactive plot
 
 
+```{r}
+ice_duration <-
+  ggplot(data = ntl_icecover, aes(x = year)) +
+  geom_line(aes(y = ice_duration, color = lakeid), alpha = 0.7) +
+  theme_minimal() +
+  labs(x = "Year", y = "Ice Duration (Days)", title = "Ice Duration of Lakes in the Madison, WI Area", subtitle = "North Temperate Lakes LTER")
+
+ice_duration %>% ggplotly()
+```
+
+## Add a map
+
+Researchers at the Niwot Ridge Long Term Ecological Research Site (NWT LTER) seek to study and monitor the health of the Colorado Rockies over time. Because of external factors like climate change, it’s more important than ever for scientists to understand how and why the Rockies are changing. 
+
+The American pika (Ochotona princeps) is a key species present at the NWT LTER. Despite their small size, pikas can be very informative about the health of the ecosystem. If pikas are more stressed, it can suggest that their habitat has declined in quality. 
+
+![Adult pika at the Niwot site, Sara McLaughlin](https://lter.github.io/lterdatasampler/reference/figures/adultPikaNiwotRidge_SaraMcLaughlin.jpeg)
+
+### Location of Pika Sampling Stations
+
+```{r}
+# Prepare the data
+pikas_sf <- st_as_sf(x = nwt_pikas, coords = c("utm_easting", "utm_northing")) %>% 
+  st_set_crs("EPSG:26913") %>% 
+  st_transform("EPSG:4326")
+
+# Set the bounding box for the map
+leaflet() %>% 
+  addTiles() %>% 
+  addCircles(data = pikas_sf, label = ~station)
+```
 
