@@ -92,7 +92,7 @@ Did somebody say cat?? Sorry **cute** cat?! You can insert an image using the ma
 
 You can also customize alignment, size and more... add options with `{fig-align="right" width=50%}`
 
-![A smaller cat upside down... on the right](img/cat_upsidedown.jpg){fig-align="right" width="50%"}
+![A **smaller** cute cat upside down... on the right](img/cat_upsidedown.jpg){fig-align="right" width="50%"}
 
 ### We are going to use the [Cat API](https://thecatapi.com/) to add random cats to our website
 
@@ -147,28 +147,7 @@ resp <- req %>%
 knitr::include_graphics(resp[[1]]$url)
 ```
 
-## Do it in style
 
-### Themes
 
-You can change the style of your website pretty easily using the 25 pre-defined [themes](https://quarto.org/docs/output-formats/html-themes.html) selected from the [Bootswatch](https://bootswatch.com/) project.
-
-Let's try `flatly`. We need to update `_quarto.yml` so the bottom looks like this:
-
-``` yaml
-...
-
-format:
-  html:
-    theme:
-      - flatly  #cosmo
-      - brand
-    css: styles.css
-    toc: true
-```
-
-::: callout-tip
-Don't forget to save your changes before rendering!!
-:::
 
 
