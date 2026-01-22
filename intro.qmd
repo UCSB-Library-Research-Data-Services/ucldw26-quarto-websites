@@ -3,8 +3,6 @@ title: "Quarto Website"
 ---
 
 
-This is a Quarto website.
-
 ## Quarto workflow
 
 ![*Art by Allison Horst*](img/quarto_schematic.png)
