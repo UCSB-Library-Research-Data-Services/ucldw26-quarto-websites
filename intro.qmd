@@ -87,7 +87,7 @@ Adding an execution option: `#| warning: false` to the code chunk will let us hi
 
 ```{r}
 #| warning: false
-library(tidyverse)
+library(ggplot2)
 library(lterdatasampler)
 library(plotly)
 library(sf)
