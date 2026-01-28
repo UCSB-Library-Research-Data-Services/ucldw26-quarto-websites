@@ -8,6 +8,10 @@ In this session, you will learn how to turn your analysis and writing into a sle
 
 Tuesday Feb 10, 2026 ⋅ 11:00 – 12:05 (Pacific Time - Los Angeles)
 
+# Instructors
+
+Julien Brun and Greg Janée, Research Data Services, UCSB Library
+
 # How to register
 
 https://uc-love-data-week.github.io/2026/calendar
