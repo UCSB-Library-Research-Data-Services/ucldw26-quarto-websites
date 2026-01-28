@@ -15,57 +15,19 @@ Last year showcase repo: <https://github.com/UCSB-Library-Research-Data-Services
 
 ## A few examples
 
-Show different quarto websites
+Here are a few different types of Quarto websites:
 
 - Personal website: <https://brunj7.github.io/>
 - Blog based format: <https://github.com/realworlddatascience/realworlddatascience.github.io/tree/main>
 - Teaching materials: <https://ucsb-meds.github.io/creating-quarto-websites>
-- Journal article complement: 
-- Dashboard: 
+- Dashboard: <https://quarto.org/docs/gallery/#dashboards>
 
 Can be taken from last year
 
+## Quarto can do more!
 
-## Workflow to explore
+Quarto is really a full system of analytical content that can produce many different types of documents! Checkout our [Quarto Showcase](https://ucsb-library-research-data-services.github.io/ucldw25-quarto-showcase/quarto_intro.html) from last year UC Love Data Week!
 
-1. Start with a new project on local selecting quarto website + use `usethis` to make it a repo and push it to github
-
-1. Start by rendering locally in a `docs` folder
-   a. using the GUI
-   a. using the CLI
-
-1. Setup github pages to look into the docs folder for the website
-
-
-## Content
-
-- Start the new project as a Quarto website
-- Render it
-- Talk about the default files that were created
-   - `_quarto.yml`
-   - `*.qmd` 
-   - `styles.css`
-- Start editing the pages
-- Edit the website structure
-  - play with some options on `_quarto.yml`
-
-
-## What could be a fun website content to build during the workshop?
-
-- Something on the theme of love data week
-- silly things with giffs
-- piece of code
-- Interactive data visualization
-- Probably need some kind of dataset
-
-
-## Potential additional topics
-
-1. How does Quarto works
-
-1. css and stysheets
-
-1. GitHub actions to render website
 
 ## Further Readings
 
