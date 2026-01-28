@@ -4,12 +4,14 @@ title: "Hosting on GitHub Pages"
 
 You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available to this setup. In this workshop, we are opting to save the rendered html files to a `docs` folder on our main branch, which is a naming convention that GitHub uses to point to content for GitHub pages.
 
-![https://github.com/UCSB-Library-Research-Data-Services/ucldw25-quarto-showcase](img/github_pages_setup.png)
+
 
 ## Render locally 
 
 1. Create the `docs` subfolder in your project folder on your machine
-1. In the `_quarto.yml` we need to specify we want to render content to this `docs` folder
+
+2. In the `_quarto.yml`, we need to specify we want to render content to this `docs` folder setting the ` output-dir` parameter for our project:
+
 ```yaml
     project:
       type: website
@@ -30,6 +32,17 @@ You can use GitHub pages to host your website for free! Every time you push new 
           - about.qmd
 ```
 
+3. Render your website locally
+
+4. Commit and Push the `docs` folder to your remote repository on GitHub
+
+5. On the GitHub website, navigate to your repository page anf click on `Settings` tab and choose `Pages` on the left panel and select the `./docs/ folder and save:
+
+![](img/github_pages_setup.png){width=80% fig-align="center"}
+
+6. Go back to your main page on your repository and on the right panel click on the wheel for settings. Add the link of your website to your repository by checking the box `Use your GiHub Pages website`:
+
+![](img/gh-add_url.png){width=70% fig-align="center"}
 
 
 
