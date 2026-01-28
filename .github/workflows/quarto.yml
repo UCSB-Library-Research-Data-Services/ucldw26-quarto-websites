@@ -28,7 +28,7 @@ jobs:
           packages:
             any::knitr
             any::rmarkdown
-            any::tidyverse
+            any::lterdatasampler
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
