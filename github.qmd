@@ -2,8 +2,6 @@
 title: "Hosting on GitHub Pages"
 ---
 
-## Host it on GitHub
-
 You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available to this setup. In this workshop, we are opting to save the rendered html files to a `docs` folder, which is a naming convention that GitHub uses to point to content for GitHub pages.
 
 ![https://github.com/UCSB-Library-Research-Data-Services/ucldw25-quarto-showcase](img/github_pages_setup.png)
