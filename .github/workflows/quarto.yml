@@ -29,7 +29,7 @@ jobs:
             any::knitr
             any::rmarkdown
             any::lterdatasampler
-            any::ggplot2
+            any::tidyverse
             any::plotly
             any::sf
             any::leaflet
