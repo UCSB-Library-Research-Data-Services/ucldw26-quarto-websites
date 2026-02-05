@@ -188,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available to this setup. In this workshop, we are opting to save the rendered html files to a <code>docs</code> folder on the main branch of our repository, which is a naming convention that GitHub uses to point to content for GitHub pages.</p>
+<p>You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available for this setup. In this workshop, we are opting to save the rendered html files to a <code>docs</code> folder on the main branch of our repository, which is a naming convention that GitHub uses to point to content for GitHub pages.</p>
 <section id="using-the-docs-folder" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-docs-folder">Using the <code>docs</code> folder</h2>
 <ol type="1">
@@ -212,7 +212,7 @@ Commit and Push the <code>docs</code> folder to your remote repository on GitHub
 On the GitHub website, navigate to your repository page and click on <code>Settings</code> tab and choose <code>Pages</code> on the left panel and select the <code>./docs/</code> folder and save: <img src="img/gh-pages_docs.png" class="img-fluid quarto-figure quarto-figure-center" style="width:80.0%"></p></li>
 </ol>
 <p>5.<strong>Add your website URL</strong> to your repo:<br>
-Go back to the main page on your repository and on the right panel click on the wheel for settings. Add the link of your website to your repository by checking the box <code>Use your GiHub Pages website</code>:</p>
+Go back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your website to your repository by checking the box <code>Use your GitHub Pages website</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/gh-add_url.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
@@ -221,11 +221,11 @@ Go back to the main page on your repository and on the right panel click on the 
 </section>
 <section id="using-the-gh-pages-branch" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-gh-pages-branch">Using the <code>gh-pages</code> branch</h2>
-<p>You can also make GitHub render your quarto website! It is a more automated workflow, however it will require you to dig into GiHub Actions scripting. To do so you will have to create a special branch named <code>gh-pages</code> and write a GitHub Action. Here is the one we used for this website:</p>
+<p>You can also make GitHub render your Quarto website! It is a more automated workflow, however, it will require you to dig into GitHub Actions scripting. To do so, you will have to create a special branch named <code>gh-pages</code> and write a GitHub Action. Here is the one we used for this website:</p>
 <ol type="1">
 <li><p><strong>Create a <code>gh-pages</code> branch</strong></p></li>
-<li><p><strong>Setup the branch</strong> to host your website: On your repository and click on the <code>Settings</code> tab and choose <code>Pages</code> on the left panel and select <code>gh-pages</code> branch and the <code>/(root)/</code> folder and save: <img src="img/gh-pages_branch.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p></li>
-<li><p><strong>Add a new GitHub Action workflow</strong>: Go back to the main page on your repository and click on the <code>Actions</code> tab and hit the New workflow green button. <img src="img/gh-action_add.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<li><p><strong>Setup the branch</strong> to host your website: On your repository homepage, click the <code>Settings</code> tab and choose <code>Pages</code> on the left panel and select <code>gh-pages</code> branch and the <code>/(root)/</code> folder and save: <img src="img/gh-pages_branch.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p></li>
+<li><p><strong>Add a new GitHub Action workflow</strong>: Go back to the main page of your repository and click the <code>Actions</code> tab and hit the “New workflow” button. <img src="img/gh-action_add.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></p>
 <p>On the next page with several predefined workflows, click on <code>Skip this and set up a workflow yourself →</code></p></li>
 <li><p><strong>Add the GitHub Action code</strong>:</p></li>
 </ol>
