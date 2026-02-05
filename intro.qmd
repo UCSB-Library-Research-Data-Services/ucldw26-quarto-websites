@@ -19,6 +19,7 @@ title: "Quarto Website"
 
 -   Code (chunks) with your analysis (R and friends)
 
+
 ## Structure of a Quarto website
 
 For a website, each webpage is going to be its separate quarto document. To create a website, you need one extra YAML file that will stitch all those pages together. Enters: `_quarto.yml`
