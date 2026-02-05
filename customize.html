@@ -161,13 +161,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#customize-your-site" id="toc-customize-your-site" class="nav-link active" data-scroll-target="#customize-your-site">Customize your site</a>
+  <li><a href="#themes" id="toc-themes" class="nav-link active" data-scroll-target="#themes">Themes</a></li>
+  <li><a href="#modify-your-website-look-with-css" id="toc-modify-your-website-look-with-css" class="nav-link" data-scroll-target="#modify-your-website-look-with-css">Modify your website look with CSS</a>
   <ul class="collapse">
-  <li><a href="#themes" id="toc-themes" class="nav-link" data-scroll-target="#themes">Themes</a></li>
-  <li><a href="#css" id="toc-css" class="nav-link" data-scroll-target="#css">CSS</a></li>
-  <li><a href="#syntactically-awesome-stylesheets-sass" id="toc-syntactically-awesome-stylesheets-sass" class="nav-link" data-scroll-target="#syntactically-awesome-stylesheets-sass"><strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heets (Sass)</a></li>
+  <li><a href="#create-your-own-theme-with-syntactically-awesome-stylesheets-sass" id="toc-create-your-own-theme-with-syntactically-awesome-stylesheets-sass" class="nav-link" data-scroll-target="#create-your-own-theme-with-syntactically-awesome-stylesheets-sass">Create your own theme with <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heets (Sass)</a></li>
   </ul></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
 </nav>
     </div>
@@ -193,11 +192,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="customize-your-site" class="level2">
-<h2 class="anchored" data-anchor-id="customize-your-site">Customize your site</h2>
-<section id="themes" class="level3">
-<h3 class="anchored" data-anchor-id="themes">Themes</h3>
-<p>You can change the style of your website pretty easily using the 25 pre-defined <a href="https://quarto.org/docs/output-formats/html-themes.html">themes</a> selected from the <a href="https://bootswatch.com/">Bootswatch</a> project.</p>
+<section id="themes" class="level2">
+<h2 class="anchored" data-anchor-id="themes">Themes</h2>
+<p>You can change the style of your website pretty easily using the 25 pre-defined <a href="https://quarto.org/docs/output-formats/html-themes.html" target="_blank">themes</a> selected from the <a href="https://bootswatch.com/" target="_blank">Bootswatch</a> project.</p>
 <p>Let’s try <code>flatly</code>. We need to update <code>_quarto.yml</code> so the bottom looks like this:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">...</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -221,8 +218,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="css" class="level3">
-<h3 class="anchored" data-anchor-id="css">CSS</h3>
+<section id="modify-your-website-look-with-css" class="level2">
+<h2 class="anchored" data-anchor-id="modify-your-website-look-with-css">Modify your website look with CSS</h2>
 <p>You also have other ways to customize further those default themes. For example you can use the Cascading Style Sheets or <code>CSS</code> to add specific rules to specific elements of your website. By default when you create a quarto website project in RStudio, it will create a file named <code>style.css</code> and add it to your styling options in <code>_quarto.yml</code>. This css file is empty by default. Let’s add some content to modify our headers of level 2 to be green and have more space between letters</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* css styles */</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -230,14 +227,22 @@ Tip
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">orange</span><span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="syntactically-awesome-stylesheets-sass" class="level3">
-<h3 class="anchored" data-anchor-id="syntactically-awesome-stylesheets-sass"><strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heets (Sass)</h3>
+<section id="create-your-own-theme-with-syntactically-awesome-stylesheets-sass" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-own-theme-with-syntactically-awesome-stylesheets-sass">Create your own theme with <strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heets (Sass)</h3>
 <p>Sass extends existing CSS features in a number of exciting ways, but importantly reduces repetition. You can use <code>.scss</code> stylesheet file(s) to define Sass variables to quickly customize your website’s theme. Sass variables are defined in the form <code>$var-name: value;</code>. Then you can use those variables to assign style to elements (that quarto has predefined). For example, let’s make our navigation bar purple:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>$purple<span class="in">:</span> <span class="pp">#800080</span>;        <span class="co">/* define the variable purple as a color */</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>$navbar-bg<span class="in">:</span> $purple;     <span class="co">/* use this variable to change navbar background */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="er">// colors</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>$purple<span class="in">:</span> <span class="pp">#800080</span>;        <span class="co">/* define the variable purple as a color */</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>$navbar-bg<span class="in">:</span> $purple;     <span class="co">/* use this variable to change navbar background */</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="er">// import Google font-size</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Nunito:wght@300;800&amp;family=Roboto+Mono:wght@300;400&amp;family=Sanchez&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="er">// fonts</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>$font-family-sans-serif<span class="in">:</span> 'Nunito'<span class="op">,</span> sans-serif;</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>$font-family-serif<span class="in">:</span> 'Sanchez'<span class="op">,</span> serif;</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>$font-family-monospace<span class="in">:</span> 'Roboto Mono'<span class="op">,</span> monospace;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And modify the <code>_quarto.yml</code> as follow:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">...</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -245,14 +250,18 @@ Tip
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    theme:</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">      - cosmo  #flatly</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">      - styles.scss</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">      - mytheme.scss</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    css: styles.css</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThpNzlrd3pxNjJydTE4MnBnNjE2ZTQ4ZDdkbTNzeGltNmtxcmNjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L40sNfcoJs5Op5afQU/giphy.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 </section>
 </section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
-<p><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThpNzlrd3pxNjJydTE4MnBnNjE2ZTQ4ZDdkbTNzeGltNmtxcmNjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L40sNfcoJs5Op5afQU/giphy.gif" class="img-fluid"></p>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
 <li>Creating a Quarto website: <a href="https://quarto.org/docs/websites/" class="uri">https://quarto.org/docs/websites/</a></li>
 <li>Quarto website video series: <a href="https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/" class="uri">https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/</a></li>
