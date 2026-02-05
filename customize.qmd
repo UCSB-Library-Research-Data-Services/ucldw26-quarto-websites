@@ -2,11 +2,10 @@
 title: "Do it in Style"
 ---
 
-## Customize your site
 
-### Themes
+## Themes
 
-You can change the style of your website pretty easily using the 25 pre-defined [themes](https://quarto.org/docs/output-formats/html-themes.html) selected from the [Bootswatch](https://bootswatch.com/) project.
+You can change the style of your website pretty easily using the 25 pre-defined [themes](https://quarto.org/docs/output-formats/html-themes.html){target="_blank"} selected from the [Bootswatch](https://bootswatch.com/){target="_blank"} project.
 
 Let's try `flatly`. We need to update `_quarto.yml` so the bottom looks like this:
 
@@ -25,9 +24,12 @@ format:
 Don't forget to save your changes before rendering!!
 :::
 
-### CSS
+## Modify your website look with CSS
 
-You also have other ways to customize further those default themes. For example you can use the Cascading Style Sheets or `CSS` to add specific rules to specific elements of your website. By default when you create a quarto website project in RStudio, it will create a file named `style.css` and add it to your styling options in `_quarto.yml`. This css file is empty by default. Let's add some content to modify our headers of level 2 to be green and have more space between letters
+You also have other ways to customize further those default themes. For example you can use the Cascading Style Sheets 
+or `CSS` to add specific rules to specific elements of your website. By default when you create a quarto website project
+in RStudio, it will create a file named `style.css` and add it to your styling options in `_quarto.yml`. This css file 
+is empty by default. Let's add some content to modify our headers of level 2 to be green and have more space between letters
 
 ``` css
 /* css styles */
@@ -38,15 +40,24 @@ h2 {
 }
 ```
 
-### **S**yntactically **A**wesome **S**tyle**s**heets (Sass)
+### Create your own theme with **S**yntactically **A**wesome **S**tyle**s**heets (Sass)
 
 Sass extends existing CSS features in a number of exciting ways, but importantly reduces repetition. You can use `.scss` stylesheet file(s) to define Sass variables to quickly customize your website’s theme. Sass variables are defined in the form `$var-name: value;`. Then you can use those variables to assign style to elements (that quarto has predefined). For example, let's make our navigation bar purple:
 
 ``` css
 /*-- scss:defaults --*/
 
+// colors
 $purple: #800080;        /* define the variable purple as a color */
 $navbar-bg: $purple;     /* use this variable to change navbar background */
+
+// import Google font-size
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Sanchez', serif;
+$font-family-monospace: 'Roboto Mono', monospace;
 ```
 
 And modify the `_quarto.yml` as follow:
@@ -58,14 +69,16 @@ format:
   html:
     theme:
       - cosmo  #flatly
-      - styles.scss
+      - mytheme.scss
     css: styles.css
     toc: true
 ```
 
-## Next steps
 
-![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThpNzlrd3pxNjJydTE4MnBnNjE2ZTQ4ZDdkbTNzeGltNmtxcmNjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L40sNfcoJs5Op5afQU/giphy.gif)
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThpNzlrd3pxNjJydTE4MnBnNjE2ZTQ4ZDdkbTNzeGltNmtxcmNjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L40sNfcoJs5Op5afQU/giphy.gif){fig-align="center"}
+
+
+## Further reading
 
 -   Creating a Quarto website: <https://quarto.org/docs/websites/>
 -   Quarto website video series: <https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/>
