@@ -3,7 +3,7 @@ title: "Hosting on GitHub Pages"
 ---
 
 You can use GitHub pages to host your website for free! Every time you push new content, your website will update within 
-a few minutes!! There are different workflows available to this setup. In this workshop, we are opting to save the rendered 
+a few minutes!! There are different workflows available for this setup. In this workshop, we are opting to save the rendered 
 html files to a `docs` folder on the main branch of our repository, which is a naming convention that GitHub uses to point
 to content for GitHub pages.
 
@@ -37,27 +37,27 @@ and select the `./docs/` folder and save:
 ![](img/gh-pages_docs.png){width=80% fig-align="center"}
 
 5.**Add your website URL** to your repo:  
-Go back to the main page on your repository and on the right panel click on the wheel for settings. Add the link of your
-website to your repository by checking the box `Use your GiHub Pages website`:
+Go back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your
+website to your repository by checking the box `Use your GitHub Pages website`:
 
 ![](img/gh-add_url.png){width=70% fig-align="center"}
 
 
 ## Using the `gh-pages` branch  
 
-You can also make GitHub render your quarto website! It is a more automated workflow, however it will require you to dig
-into GiHub Actions scripting. To do so you will have to create a special branch named `gh-pages` 
+You can also make GitHub render your Quarto website! It is a more automated workflow, however, it will require you to dig
+into GitHub Actions scripting. To do so, you will have to create a special branch named `gh-pages` 
 and write a GitHub Action. Here is the one we used for this website:
 
 1. **Create a `gh-pages` branch**  
 
 2. **Setup the branch** to host your website:
-On your repository and click on the `Settings` tab and choose `Pages` on the left panel and select `gh-pages` branch and
+On your repository homepage, click the `Settings` tab and choose `Pages` on the left panel and select `gh-pages` branch and
 the `/(root)/` folder and save:
 ![](img/gh-pages_branch.png){width=70% fig-align="center"}
 
 3. **Add a new GitHub Action workflow**: 
-Go back to the main page on your repository and click on the `Actions` tab and hit the New workflow green button.
+Go back to the main page of your repository and click the `Actions` tab and hit the "New workflow" button.
 ![](img/gh-action_add.png){width=70% fig-align="center"}
 
    On the next page with several predefined workflows, click on `Skip this and set up a workflow yourself →`
