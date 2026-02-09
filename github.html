@@ -189,6 +189,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available for this setup. In this workshop, we are opting to save the rendered html files to a <code>docs</code> folder on the main branch of our repository, which is a naming convention that GitHub uses to point to content for GitHub pages.</p>
+<table class="table-hover caption-top table">
+<caption>Approaches main pros and cons</caption>
+<colgroup>
+<col style="width: 38%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>folder</td>
+<td>Easy to setup</td>
+<td>You need to make sure to first render and commit changes locally</td>
+</tr>
+<tr class="even">
+<td>folder</td>
+<td>Better control when to render the website</td>
+<td>More “busy” commits</td>
+</tr>
+<tr class="odd">
+<td>branch</td>
+<td>Automatic rendering on push</td>
+<td>Setup requires to know (some) GitHub Actions syntax</td>
+</tr>
+<tr class="even">
+<td>branch</td>
+<td>better separation of Quarto and html files</td>
+<td>Rendering can be slow</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 <section id="using-the-docs-folder" class="level2">
 <h2 class="anchored" data-anchor-id="using-the-docs-folder">Using the <code>docs</code> folder</h2>
 <ol type="1">
@@ -204,6 +242,7 @@ In your project folder on your machine, create a docs subfolder. Then edit the <
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">navbar</span><span class="kw">:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">       ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
+<li><p><strong>Disable GitHub Pages automatic rendering</strong>: Add a <code>.nojekyll</code> empty file at the root/top level of your repository. You can use any text editor (including RStudio or VS code) or the command line: <code>touch .nojekyll</code></p></li>
 <li><p><strong>Render your website locally</strong>:<br>
 Use either your favorite Integrated Development Environment (IDE) or running <code>quarto::quarto_render()</code> at the R console.</p></li>
 <li><p>Upload your website to GitHub:<br>
@@ -211,7 +250,7 @@ Commit and Push the <code>docs</code> folder to your remote repository on GitHub
 <li><p><strong>Setup GitHub Pages</strong>:<br>
 On the GitHub website, navigate to your repository page and click on <code>Settings</code> tab and choose <code>Pages</code> on the left panel and select the <code>./docs/</code> folder and save: <img src="img/gh-pages_docs.png" class="img-fluid quarto-figure quarto-figure-center" style="width:80.0%"></p></li>
 </ol>
-<p>5.<strong>Add your website URL</strong> to your repo:<br>
+<p>6.<strong>Add your website URL</strong> to your repo:<br>
 Go back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your website to your repository by checking the box <code>Use your GitHub Pages website</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
