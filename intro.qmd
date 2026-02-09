@@ -119,11 +119,14 @@ _More on output options: <https://quarto.org/docs/computations/execution-options
 
 The Long Term Ecological Research (LTER) [North Temperate Lakes](https://lter.limnology.wisc.edu) (Madison, WI) reserach site has one of the longest time-series of Temperatures and Lake Ice Duration. The study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems. We can examine the ice duration of Lake Mendota and Lake Monona.
 
+BTW you can add callout blocks super easily!!
 
 ::: callout-tip
 ## Fun Fact
 Did you know that Joni Mitchell’s album “Hejira” art is her skating on Lake Mendota in 1976 !? <https://wisconsinlife.org/story/joni-mitchell-skates-on-lake-mendota-and-into-music-history/>
 :::
+
+_More on callout blocks: <https://quarto.org/docs/authoring/callouts.html>_
 
 Here is the code chunk for our first plot using ggplot2:
 
