@@ -160,6 +160,7 @@ Try `#| code-fold: true` if you want to get fancy
 
 ```{r}
 #| code-fold: true
+#| warning: false
 
 ice_duration <-
   ggplot(data = ntl_icecover, aes(x = year)) +
