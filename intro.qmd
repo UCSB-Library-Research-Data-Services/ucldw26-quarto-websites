@@ -178,12 +178,6 @@ _more on code chunk options here: <https://quarto.org/docs/output-formats/html-c
 ### Add an interactive plot
 
 ```{r}
-ice_duration <-
-  ggplot(data = ntl_icecover, aes(x = year)) +
-  geom_line(aes(y = ice_duration, color = lakeid), alpha = 0.7) +
-  theme_minimal() +
-  labs(x = "Year", y = "Ice Duration (Days)", title = "Ice Duration of Lakes in the Madison, WI Area", subtitle = "North Temperate Lakes LTER")
-
 ice_duration %>% ggplotly()
 ```
 
