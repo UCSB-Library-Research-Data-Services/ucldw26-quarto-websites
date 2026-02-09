@@ -68,6 +68,18 @@ You can also customize alignment, size and more... add options with `{fig-align=
 ![A **smaller** cute cat upside down... on the right](img/cat_upsidedown.jpg){fig-align="right" width="50%"}
 
 
+## How about some math?
+
+You can insert LaTeX math expressions into your page or document.  What's particularly nice about Quarto is that you can use the math formatting from LaTeX without having to buy into the entire LaTeX environment.  For example, you might want remind your readers that
+
+$$e = \lim _{n\to \infty }\left(1+{\frac {1}{n}}\right)^{n}$$
+
+and it's also true that
+
+$$e=\sum \limits _{n=0}^{\infty }{\frac {1}{n!}}=1+{\frac {1}{1}}+{\frac {1}{1\cdot 2}}+{\frac {1}{1\cdot 2\cdot 3}}+\cdots$$
+
+And don't forget that $e^{i\pi} = -1$.
+
 ## So I can build a website that leverages R code!?
 
 Yep!! And as with any other R script, it is good practice to start by loading the libraries you are going to need for your analysis / website content.
