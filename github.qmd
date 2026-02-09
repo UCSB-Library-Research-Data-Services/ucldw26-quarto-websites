@@ -8,6 +8,18 @@ html files to a `docs` folder on the main branch of our repository, which is a n
 to content for GitHub pages.
 
 
+| Approach  | Pro  | Con  |
+|----------|--------| --------|
+| folder   | Easy to setup   | You need to make sure to first render and commit changes locally |
+| folder   | Better control when to render the website | More "busy" commits |
+| branch   | Automatic rendering on push  | Setup requires to know (some) GitHub Actions syntax |
+| branch   | better separation of Quarto and html files  | Rendering can be slow |
+
+: Approaches main pros and cons {.hover}
+
+<br>
+
+
 ## Using the `docs` folder  
 
 1. **Setup the `docs` subfolder**:  
@@ -24,19 +36,21 @@ content into this `docs` folder by setting up the ` output-dir` parameter
       navbar:
        ...
 ```
+2. **Disable GitHub Pages automatic rendering**:
+Add a `.nojekyll` empty file at the root/top level of your repository. You can use any text editor (including RStudio or VS code) or the command line: `touch .nojekyll`
 
-2. **Render your website locally**:   
+3. **Render your website locally**:   
 Use either your favorite Integrated Development Environment (IDE) or running `quarto::quarto_render()` at the R console. 
 
-2. Upload your website to GitHub:  
+4. Upload your website to GitHub:  
 Commit and Push the `docs` folder to your remote repository on GitHub
 
-4. **Setup GitHub Pages**:   
+5. **Setup GitHub Pages**:   
 On the GitHub website, navigate to your repository page and click on `Settings` tab and choose `Pages` on the left panel
 and select the `./docs/` folder and save:
 ![](img/gh-pages_docs.png){width=80% fig-align="center"}
 
-5.**Add your website URL** to your repo:  
+6.**Add your website URL** to your repo:  
 Go back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your
 website to your repository by checking the box `Use your GitHub Pages website`:
 
