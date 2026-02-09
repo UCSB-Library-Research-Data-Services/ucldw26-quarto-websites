@@ -81,7 +81,8 @@ format:
 ## Further reading
 
 -   Creating a Quarto website: <https://quarto.org/docs/websites/>
+-   Quarto publishing documentation: <https://quarto.org/docs/publishing/github-pages.html>
 -   Quarto website video series: <https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/>
--   Sam Shanny-Csik's intro tutorial: <https://ucsb-meds.github.io/creating-quarto-websites/>
+-   Sam Shanny-Csik's publishing your personal website: <https://ucsb-meds.github.io/creating-quarto-websites/>
 -   Sam's styling tips: <https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide>
 -   Want more cat pictures? Visit the cat API <https://thecatapi.com/>
