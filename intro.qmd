@@ -32,25 +32,23 @@ project:
   output-dir: docs
 
 website:
-  title: "demo-website"
+  title: "Publishing Quarto websites with GitHub pages"
   navbar:
     left:
-      - href: quarto_intro.qmd
-        text: "Introduction"
       - href: index.qmd
-        text: "Quarto website"
-      - href: quarto_slides.qmd
-        text: "Slides"
-      - href: quarto_paper.qmd
-        text: "Paper"
-      - href: quarto_interactive.qmd
-        text: "Getting fancy"
+        text: Intro
+      - href: intro.qmd
+        text: "Quarto Websites" 
+      - href: github.qmd
+        text: "Publish on GitHub"
+      - href: customize.qmd
+        text: "Do it in Style"
+      - about.qmd
 
 format:
   html:
     theme:
       - cosmo
-      - brand
     css: styles.css
     toc: true
 ```
