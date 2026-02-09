@@ -82,6 +82,6 @@ format:
 
 -   Creating a Quarto website: <https://quarto.org/docs/websites/>
 -   Quarto website video series: <https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/>
--   Sam's intro tutorial: <https://ucsb-meds.github.io/creating-quarto-websites/>
+-   Sam Shanny-Csik's intro tutorial: <https://ucsb-meds.github.io/creating-quarto-websites/>
 -   Sam's styling tips: <https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide>
--   An introductory tutorial from the [LTER](https://lternet.edu/) team: <https://lter.github.io/scicomp/tutorial_quarto-website.html>
+-   Want more cat pictures? Visit the cat API <https://thecatapi.com/>
