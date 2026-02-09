@@ -25,7 +25,7 @@
     "href": "customize.html#further-reading",
     "title": "Do it in Style",
     "section": "Further reading",
-    "text": "Further reading\n\nCreating a Quarto website: https://quarto.org/docs/websites/\nQuarto website video series: https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/\nSam’s intro tutorial: https://ucsb-meds.github.io/creating-quarto-websites/\nSam’s styling tips: https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide\nAn introductory tutorial from the LTER team: https://lter.github.io/scicomp/tutorial_quarto-website.html"
+    "text": "Further reading\n\nCreating a Quarto website: https://quarto.org/docs/websites/\nQuarto website video series: https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/\nSam Shanny-Csik’s intro tutorial: https://ucsb-meds.github.io/creating-quarto-websites/\nSam’s styling tips: https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide\nWant more cat pictures? Visit the cat API https://thecatapi.com/"
   },
   {
     "objectID": "about.html",
