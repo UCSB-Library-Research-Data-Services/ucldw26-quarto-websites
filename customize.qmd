@@ -5,9 +5,9 @@ title: "Do it in Style"
 
 ## Themes
 
-You can change the style of your website pretty easily using the 25 pre-defined [themes](https://quarto.org/docs/output-formats/html-themes.html){target="_blank"} selected from the [Bootswatch](https://bootswatch.com/){target="_blank"} project.
+[Bootswatch](https://bootswatch.com/){target="_blank"} is a free collection of 25 themes for [Bootstrap](https://getbootstrap.com/), the popular front-end frameworks that Quarto relies on by default to render websites. You can easily change the style of your website by using one of these 25 pre-defined [themes](https://quarto.org/docs/output-formats/html-themes.html){target="_blank"}.
 
-Let's try `flatly`. We need to update `_quarto.yml` so the bottom looks like this:
+Let's try the `flatly` theme. We need to update `_quarto.yml` so the bottom looks like this:
 
 ``` yaml
 ...
