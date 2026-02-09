@@ -105,6 +105,13 @@
     "text": "Images\nDid somebody say cat?? Sorry cute cat?! You can insert an image using the markdown syntax: ![Fig caption](path/to/image)\n\n\n\nA cat upside down\n\n\n\nYou can also customize alignment, size and more… add options with {fig-align=\"right\" width=50%}\n\n\n\nA smaller cute cat upside down… on the right"
   },
   {
+    "objectID": "intro.html#how-about-some-math",
+    "href": "intro.html#how-about-some-math",
+    "title": "Quarto Website",
+    "section": "How about some math?",
+    "text": "How about some math?\nYou can insert LaTeX math expressions into your page or document. What’s particularly nice about Quarto is that you can use the math formatting from LaTeX without having to buy into the entire LaTeX environment. For example, you might want remind your readers that\n\\[e = \\lim _{n\\to \\infty }\\left(1+{\\frac {1}{n}}\\right)^{n}\\]\nand it’s also true that\n\\[e=\\sum \\limits _{n=0}^{\\infty }{\\frac {1}{n!}}=1+{\\frac {1}{1}}+{\\frac {1}{1\\cdot 2}}+{\\frac {1}{1\\cdot 2\\cdot 3}}+\\cdots\\]\nAnd don’t forget that \\(e^{i\\pi} = -1\\)."
+  },
+  {
     "objectID": "intro.html#so-i-can-build-a-website-that-leverages-r-code",
     "href": "intro.html#so-i-can-build-a-website-that-leverages-r-code",
     "title": "Quarto Website",
