@@ -63,8 +63,6 @@ $font-family-monospace: 'Roboto Mono', monospace;
 And modify the `_quarto.yml` as follow:
 
 ``` yaml
-...
-
 format:
   html:
     theme:
