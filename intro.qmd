@@ -111,7 +111,7 @@ _More on output options: <https://quarto.org/docs/computations/execution-options
 
 ### First plot
 
-The Long Term Ecological Research (LTER) [North Temperate Lakes](https://lter.limnology.wisc.edu) (Madison, WI) reserach site has one of the longest time-series of Temperatures and Lake Ice Duration. The study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems. We can examine the ice duration of Lake Mendota and Lake Monona.
+The Long Term Ecological Research (LTER) [North Temperate Lakes](https://lter.limnology.wisc.edu) (Madison, WI) research site has one of the longest time-series of Temperatures and Lake Ice Duration. The study and analysis of lake ice formation can inform scientists about how quickly the climate is changing, and are critical to minimizing disruptions to lake ecosystems. We can examine the ice duration of Lake Mendota and Lake Monona.
 
 BTW you can add callout blocks super easily!!
 
