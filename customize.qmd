@@ -74,6 +74,9 @@ format:
     toc: true
 ```
 
+_More on Sass Variables in Quarto: <https://quarto.org/docs/output-formats/html-themes.html#sass-variables>_
+
+<br>
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThpNzlrd3pxNjJydTE4MnBnNjE2ZTQ4ZDdkbTNzeGltNmtxcmNjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L40sNfcoJs5Op5afQU/giphy.gif){fig-align="center"}
 
