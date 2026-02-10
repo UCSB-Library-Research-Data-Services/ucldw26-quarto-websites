@@ -68,7 +68,7 @@ And modify the `_quarto.yml` as follow:
 format:
   html:
     theme:
-      - cosmo  #flatly
+      - flatly   # cosmo
       - mytheme.scss
     css: styles.css
     toc: true
