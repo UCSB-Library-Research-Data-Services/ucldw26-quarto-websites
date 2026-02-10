@@ -2,15 +2,19 @@
 title: "Publishing Quarto websites with GitHub pages"
 ---
 
-## What is Quarto? 
+## Why Quarto? 
 
-Short overview of quarto --  Better at the end?
-- How it works
-- What it supports
+[Quarto](https://quarto.org) is an open-source scientific and technical publishing system.  It can be used to create different types of content (single web pages, websites, journal articles, presentations, ...) in different formats (HTML, PDF, Microsoft Word, ...).  We will focus on using Quarto to create a website in this workshop.
 
-Transitions to the different formats it can output (website, journal article, presentation, ...)
+But there are lots tools for creating websites.  Why use Quarto?  Here are some of our favorite reasons:
 
-Last year showcase repo: <https://github.com/UCSB-Library-Research-Data-Services/ucldw25-quarto-showcase/tree/main>
+- The software is open source
+- Sites are created by editing simple text files (e.g., markdown files)
+- Lots of features are available which are easily enabled
+- Sites look good out of the box
+- But customizing further is relatively easy
+- Publishing and hosting via GitHub Pages is drop-dead easy, and free to boot!
+- The use of simple text files and GitHub meshes perfectly with using git for collaboration and version control
 
 
 ## A few examples
@@ -22,7 +26,6 @@ Here are a few different types of Quarto websites:
 - Teaching materials: <https://ucsb-meds.github.io/creating-quarto-websites>
 - Dashboard: <https://quarto.org/docs/gallery/#dashboards>
 
-Can be taken from last year
 
 ## Quarto can do more!
 
