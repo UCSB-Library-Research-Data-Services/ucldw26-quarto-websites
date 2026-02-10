@@ -175,6 +175,8 @@ _more on code chunk options here: <https://quarto.org/docs/output-formats/html-c
 ### Add an interactive plot
 
 ```{r}
+#| warning: false
+
 library(plotly)
 
 ice_duration %>% ggplotly()
@@ -192,6 +194,8 @@ The American pika (Ochotona princeps) is a key species present at the NWT LTER. 
 ### Location of Pika Sampling Stations
 
 ```{r}
+#| warning: false
+
 library(sf)
 library(leaflet)
 
