@@ -1,4 +1,4 @@
-![DOI](https://zenodo.org/badge/1132964055.svg)](https://doi.org/10.5281/zenodo.18675394)
+[![DOI](https://zenodo.org/badge/1132964055.svg)](https://doi.org/10.5281/zenodo.18675394)
 
 # Publishing a Quarto website on GitHub pages
 
