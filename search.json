@@ -28,11 +28,25 @@
     "text": "Further reading\n\nCreating a Quarto website: https://quarto.org/docs/websites/\nQuarto publishing documentation: https://quarto.org/docs/publishing/github-pages.html\nQuarto website video series: https://quarto.org/docs/blog/posts/2024-12-04-websites-workshop/\nSam Shanny-Csik’s publishing your personal website: https://ucsb-meds.github.io/creating-quarto-websites/\nSam’s styling tips: https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide\nWant more cat pictures? Visit the cat API https://thecatapi.com/"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "github.html",
+    "href": "github.html",
+    "title": "Hosting on GitHub Pages",
     "section": "",
-    "text": "Research Data Services (RDS) helps UCSB researchers manage and preserve their research data through:\n\nConsultations\nLong-term engagements\nInstructional workshops\n\nOur team offers support across the research data lifecycle, from pre-project planning to post-project archival, connecting researchers with both locally- and externally-provided curation services. Our goal is to ensure that all research data is well-described, FAIR (Findable, Accessible, Interoperable, Reusable), and sustainably preservable, and that researchers receive scholarly credit for sharing and publishing data.\nContact us if you have any questions: rds@library.ucsb.edu"
+    "text": "You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available for this setup. In this workshop, we are opting to save the rendered html files to a docs folder on the main branch of our repository, which is a naming convention that GitHub uses to point to content for GitHub pages."
+  },
+  {
+    "objectID": "github.html#using-the-docs-folder",
+    "href": "github.html#using-the-docs-folder",
+    "title": "Hosting on GitHub Pages",
+    "section": "Using the docs folder",
+    "text": "Using the docs folder\n\nSetup the docs subfolder:\nIn your project folder on your machine, create a docs subfolder. Then edit the _quarto.yml to specify we want to render content into this docs folder by setting up the output-dir parameter\n\n    project:\n      type: website\n      output-dir: docs\n    \n    website:\n      title: \"Publishing Quarto websites with GitHub pages\"\n      navbar:\n       ...\n\nDisable GitHub Pages automatic rendering: Add a .nojekyll empty file at the root/top level of your repository. You can use any text editor (including RStudio or VS code) or the command line: touch .nojekyll\nRender your website locally:\nUse either your favorite Integrated Development Environment (IDE) or running quarto::quarto_render() at the R console.\nUpload your website to GitHub:\nCommit and Push the docs folder to your remote repository on GitHub\nSetup GitHub Pages:\nOn the GitHub website, navigate to your repository page and click on Settings tab and choose Pages on the left panel and select the ./docs/ folder and save: \n\n6.Add your website URL to your repo:\nGo back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your website to your repository by checking the box Use your GitHub Pages website:"
+  },
+  {
+    "objectID": "github.html#using-the-gh-pages-branch",
+    "href": "github.html#using-the-gh-pages-branch",
+    "title": "Hosting on GitHub Pages",
+    "section": "Using the gh-pages branch",
+    "text": "Using the gh-pages branch\nYou can also make GitHub render your Quarto website! It is a more automated workflow, however, it will require you to dig into GitHub Actions scripting. To do so, you will have to create a special branch named gh-pages and write a GitHub Action. Here is the one we used for this website:\n\nCreate a gh-pages branch\nSetup the branch to host your website: On your repository homepage, click the Settings tab and choose Pages on the left panel and select gh-pages branch and the /(root)/ folder and save: \nAdd a new GitHub Action workflow: Go back to the main page of your repository and click the Actions tab and hit the “New workflow” button. \nOn the next page with several predefined workflows, click on Skip this and set up a workflow yourself →\nAdd the GitHub Action code:\n\non:\n  workflow_dispatch:\n  push:\n    branches: main\n\nname: Quarto Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v3\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Install R\n        uses: r-lib/actions/setup-r@v2\n        with:\n          r-version: '4.5.1'\n          \n      - name: Install R Dependencies\n        uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          packages:\n            any::knitr\n            any::rmarkdown\n            any::lterdatasampler\n            any::tidyverse\n            any::plotly\n            any::sf\n            any::leaflet\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\nNow every time you push to GitHub, your website will render automatically!!"
   },
   {
     "objectID": "index.html",
@@ -126,24 +140,10 @@
     "text": "HTML widgets\n\nAdd an interactive plot\n\nlibrary(plotly)\n\nice_duration %&gt;% ggplotly()\n\n\n\n\n\n\n\nAdd a map\nResearchers at the Niwot Ridge Long Term Ecological Research Site (NWT LTER) seek to study and monitor the health of the Colorado Rockies over time. Because of external factors like climate change, it’s more important than ever for scientists to understand how and why the Rockies are changing.\nThe American pika (Ochotona princeps) is a key species present at the NWT LTER. Despite their small size, pikas can be very informative about the health of the ecosystem. If pikas are more stressed, it can suggest that their habitat has declined in quality.\n\n\n\nAdult pika at the Niwot site, Sara McLaughlin\n\n\n\n\nLocation of Pika Sampling Stations\n\nlibrary(sf)\nlibrary(leaflet)\n\n# Prepare the data\npikas_sf &lt;- st_as_sf(x = nwt_pikas, coords = c(\"utm_easting\", \"utm_northing\")) %&gt;% \n  st_set_crs(\"EPSG:26913\") %&gt;% \n  st_transform(\"EPSG:4326\")\n\n# Set the bounding box for the map\nleaflet() %&gt;% \n  addTiles() %&gt;% \n  addCircles(data = pikas_sf, label = ~station)\n\n\n\n\n\nNote: it is best practice to load all your libraries at the top of your Quarto document. Here we chose to do it out of order to highlight which package is used for each html widgets"
   },
   {
-    "objectID": "github.html",
-    "href": "github.html",
-    "title": "Hosting on GitHub Pages",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "You can use GitHub pages to host your website for free! Every time you push new content, your website will update within a few minutes!! There are different workflows available for this setup. In this workshop, we are opting to save the rendered html files to a docs folder on the main branch of our repository, which is a naming convention that GitHub uses to point to content for GitHub pages."
-  },
-  {
-    "objectID": "github.html#using-the-docs-folder",
-    "href": "github.html#using-the-docs-folder",
-    "title": "Hosting on GitHub Pages",
-    "section": "Using the docs folder",
-    "text": "Using the docs folder\n\nSetup the docs subfolder:\nIn your project folder on your machine, create a docs subfolder. Then edit the _quarto.yml to specify we want to render content into this docs folder by setting up the output-dir parameter\n\n    project:\n      type: website\n      output-dir: docs\n    \n    website:\n      title: \"Publishing Quarto websites with GitHub pages\"\n      navbar:\n       ...\n\nDisable GitHub Pages automatic rendering: Add a .nojekyll empty file at the root/top level of your repository. You can use any text editor (including RStudio or VS code) or the command line: touch .nojekyll\nRender your website locally:\nUse either your favorite Integrated Development Environment (IDE) or running quarto::quarto_render() at the R console.\nUpload your website to GitHub:\nCommit and Push the docs folder to your remote repository on GitHub\nSetup GitHub Pages:\nOn the GitHub website, navigate to your repository page and click on Settings tab and choose Pages on the left panel and select the ./docs/ folder and save: \n\n6.Add your website URL to your repo:\nGo back to the main page of your repository and in the right panel, click on the wheel for settings. Add the link of your website to your repository by checking the box Use your GitHub Pages website:"
-  },
-  {
-    "objectID": "github.html#using-the-gh-pages-branch",
-    "href": "github.html#using-the-gh-pages-branch",
-    "title": "Hosting on GitHub Pages",
-    "section": "Using the gh-pages branch",
-    "text": "Using the gh-pages branch\nYou can also make GitHub render your Quarto website! It is a more automated workflow, however, it will require you to dig into GitHub Actions scripting. To do so, you will have to create a special branch named gh-pages and write a GitHub Action. Here is the one we used for this website:\n\nCreate a gh-pages branch\nSetup the branch to host your website: On your repository homepage, click the Settings tab and choose Pages on the left panel and select gh-pages branch and the /(root)/ folder and save: \nAdd a new GitHub Action workflow: Go back to the main page of your repository and click the Actions tab and hit the “New workflow” button. \nOn the next page with several predefined workflows, click on Skip this and set up a workflow yourself →\nAdd the GitHub Action code:\n\non:\n  workflow_dispatch:\n  push:\n    branches: main\n\nname: Quarto Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v3\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Install R\n        uses: r-lib/actions/setup-r@v2\n        with:\n          r-version: '4.5.1'\n          \n      - name: Install R Dependencies\n        uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          packages:\n            any::knitr\n            any::rmarkdown\n            any::lterdatasampler\n            any::tidyverse\n            any::plotly\n            any::sf\n            any::leaflet\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\nNow every time you push to GitHub, your website will render automatically!!"
+    "text": "Research Data Services (RDS) helps UCSB researchers manage and preserve their research data through:\n\nConsultations\nLong-term engagements\nInstructional workshops\n\nOur team offers support across the research data lifecycle, from pre-project planning to post-project archival, connecting researchers with both locally- and externally-provided curation services. Our goal is to ensure that all research data is well-described, FAIR (Findable, Accessible, Interoperable, Reusable), and sustainably preservable, and that researchers receive scholarly credit for sharing and publishing data.\nContact us if you have any questions: rds@library.ucsb.edu"
   }
 ]
